@@ -11,7 +11,7 @@
   /* background-size: cover;  */
   margin: -31px; 
   margin-left:-7px;
-  border: 6px solid rgba(0, 77, 64, 0.4); 
+  border: 6px solid rgba(2, 52, 78, 0.4); 
   border-radius: 50% !important;
 }
 
@@ -85,7 +85,7 @@
   position: relative;
   padding: 11px 35px;
   background: #fff;
-  color: #9edaed;
+  color: #5ecced;
   border: 2px solid #fff;
   font-weight: 600;
   font-size: 15px;
@@ -116,7 +116,7 @@
 }
 
 .contactme:hover{
-  color: #9edaed;
+  color: #5ecced;
   background-color: white;
 }
 /* main body */
@@ -140,7 +140,7 @@ body {
 } */
 
 a {
-  color: rgb(80, 136, 155);
+  color: rgb(4, 92, 121);
 }
 
 /* main blockqoute */
@@ -320,7 +320,7 @@ h3 {
 } */
 
 #intro.section {
-  background: #9edaed repeat;
+  background: #5ecced repeat;
   position: relative;
 }
 
@@ -473,7 +473,7 @@ a.hoverline {
 } */
 
 a.hoverline:hover {
-  border-bottom: 3px solid rgb(80, 136, 155) !important;
+  border-bottom: 3px solid rgb(4, 92, 121) !important;
 }
 
 #skills .card.large {
@@ -549,7 +549,7 @@ small {
 /* main .teal-text */
 
 .teal-text {
-  color: rgb(80, 136, 155) !important;
+  color: rgb(4, 92, 121) !important;
 }
 
 /* .teal-text {
@@ -559,7 +559,7 @@ small {
 /* .teal */
 
 .teal {
-  background-color: rgb(80, 136, 155) !important;
+  background-color: rgb(4, 92, 121) !important;
 }
 
 /* .teal {
@@ -602,7 +602,7 @@ small {
     position: absolute;
   }
   nav a.button-collapse, nav a.button-collapse i {
-    color: rgb(80, 136, 155);
+    color: rgb(4, 92, 121);
     height: 56px;
     line-height: 56px;
   }
