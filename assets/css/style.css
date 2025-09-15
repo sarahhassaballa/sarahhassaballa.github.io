@@ -140,7 +140,7 @@ body {
 } */
 
 a {
-  color: rgb(4, 92, 121);
+  color: rgb(23, 98, 124);
 }
 
 /* main blockqoute */
@@ -237,7 +237,7 @@ ul.side-nav li {
 
 ul.side-nav.fixed a {
   box-sizing: content-box;
-  color: rgb(16, 202, 56);
+  color: rgb(16, 168, 202);
   display: block;
   line-height: 100%;
   padding: 10px 0 12px;
@@ -473,7 +473,7 @@ a.hoverline {
 } */
 
 a.hoverline:hover {
-  border-bottom: 3px solid rgb(4, 92, 121) !important;
+  border-bottom: 3px solid rgb(23, 98, 124) !important;
 }
 
 #skills .card.large {
@@ -549,7 +549,7 @@ small {
 /* main .teal-text */
 
 .teal-text {
-  color: rgb(4, 92, 121) !important;
+  color: rgb(23, 98, 124) !important;
 }
 
 /* .teal-text {
@@ -559,7 +559,7 @@ small {
 /* .teal */
 
 .teal {
-  background-color: rgb(4, 92, 121) !important;
+  background-color: rgb(23, 98, 124) !important;
 }
 
 /* .teal {
@@ -602,7 +602,7 @@ small {
     position: absolute;
   }
   nav a.button-collapse, nav a.button-collapse i {
-    color: rgb(4, 92, 121);
+    color: rgb(23, 98, 124);
     height: 56px;
     line-height: 56px;
   }
