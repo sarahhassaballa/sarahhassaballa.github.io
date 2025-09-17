@@ -1,6 +1,27 @@
 # Name: Sarah Hassaballa
 # This repo is a clone of https://github.com/varadbhogayata/varadbhogayata.github.io
 
+Activity 1:  
+![Activity 1 README](assets/img/Activity1_README.png)
+
+Activity 2:
+![Activity 2 Repo](assets/img/Activity2_Repo.png)
+![Activity 2 Website](assets/img/Activity1_Website.png)
+
+Activity 3:
+![Activity 3 Repo](assets/img/Activity3_Repo.png)
+![Activity 3 Website](assets/img/Activity3_Website.png)
+
+Activity 4:
+![Activity 4 Repo](assets/img/Activity4_Repo.png)
+![Activity 4 Website](assets/img/Activity4_Website.png)
+
+Activity 5:
+![Activity 5 Repo](assets/img/Activity5_Repo.png)
+![Activity 5 Website Pt1](assets/img/Activity5_Website1.png)
+![Activity 5 Website Pt2](assets/img/Activity5_Website2.png)
+
+
 # Personal Portfolio ⚡️ 
 > A clean, beautiful, responsive portfolio template for Software Developers!
 
