@@ -57,97 +57,73 @@ const dynamicProjects = [
         ];
 
         const container = document.getElementById("recent-projects-container");
-        const toggleBtn = document.getElementById("load-more-button");
+        const loadMoreBtn = document.getElementById("load-more-button");
 
-        let expanded = false; // start collapsed every refresh
+        let visibleCount = 1; // Start with the most recent project
+        let fullyExpanded = false; // start collapsed every refresh
 
         function renderProjects() {
-            container.innerHTML = ""; // clear
+            container.innerHTML = ""; // clear container
 
-            if (expanded) {
-                // Show all projects
-                dynamicProjects.forEach(project => {
-                // Build the GitHub button HTML only if gitHub property exists
-                    const gitHubButton = project.gitHub ? `
-                        <a href="${project.gitHub}" target="_blank" class="btn-floating btn-large waves-effect waves-light blue-grey">
-                            <i class="fa fa-github"></i>
-                        </a>
-                    ` : '';
-                    const card = `
-                       <div class="col s12 m6 l4">
-                            <div class="card medium">
-                                <div class="card-image waves-effect waves-block waves-light">
-                                    <img src="${project.image}" alt="${project.title}" style="width: 100%; height: 100%" class="activator" />
-                                </div>
-                                <div class="card-content">
-                                    <span class="card-title activator teal-text hoverline">
-                                        ${project.title}
-                                        <i class="mdi-navigation-more-vert right"></i>
-                                    </span>
-                                    <p>${project.summary}</p>
-                                </div>
-                                <div class="card-reveal">
-                                    <span class="card-title grey-text">
-                                        <small>Accomplishments</small>
-                                        <i class="mdi-navigation-close right"></i>
-                                    </span>
-                                    <ul>
-                                        ${project.description}
-                                    </ul>
-                                    ${gitHubButton ? `<div class="card-action">${gitHubButton}</div>` : ''}
-                                </div>
-                            </div>
-                        </div>
-                    `; 
-                    container.innerHTML += card;
-                });
-                toggleBtn.textContent = "Show Less";
-            } else {
-                // Show only most recent project (first in array)
-                const project = dynamicProjects[0];
+            for (let projectIndex = 0; projectIndex < visibleCount && projectIndex < dynamicProjects.length; projectIndex++) {
+                const project = dynamicProjects[projectIndex];
+
                 const gitHubButton = project.gitHub ? `
                     <a href="${project.gitHub}" target="_blank" class="btn-floating btn-large waves-effect waves-light blue-grey">
                         <i class="fa fa-github"></i>
                     </a>
                 ` : '';
-                const card = `
-                        <div class="col s12 m6 l4">
-                            <div class="card medium">
-                                <div class="card-image waves-effect waves-block waves-light">
-                                    <img src="${project.image}" alt="${project.title}" style="width: 100%; height: 100%" class="activator" />
-                                </div>
-                                <div class="card-content">
-                                    <span class="card-title activator teal-text hoverline">
-                                        ${project.title}
-                                        <i class="mdi-navigation-more-vert right"></i>
-                                    </span>
-                                    <p>${project.summary}</p>
-                                </div>
-                                <div class="card-reveal">
-                                    <span class="card-title grey-text">
-                                        <small>Accomplishments</small>
-                                        <i class="mdi-navigation-close right"></i>
-                                    </span>
-                                    <ul>
-                                        ${project.description}
-                                    </ul>
-                                    ${gitHubButton ? `<div class="card-action">${gitHubButton}</div>` : ''}
-                                </div>
-                            </div>
+
+            const card = `
+                <div class="col s12 m6 l4">
+                    <div class="card medium">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img src="${project.image}" alt="${project.title}" style="width: 100%; height: 100%" class="activator" />
                         </div>
-                    `;
-                container.innerHTML = card;
-                toggleBtn.textContent = "Load More Projects";
-            }
+                        <div class="card-content">
+                            <span class="card-title activator teal-text hoverline">
+                                ${project.title}
+                                <i class="mdi-navigation-more-vert right"></i>
+                            </span>
+                            <p>${project.summary}</p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text">
+                                <small>Accomplishments</small>
+                                <i class="mdi-navigation-close right"></i>
+                            </span>
+                            <ul>
+                                ${project.description}
+                            </ul>
+                                ${gitHubButton ? `<div class="card-action">${gitHubButton}</div>` : ''}
+                        </div>
+                    </div>
+                </div>
+            `; 
+            container.innerHTML += card;
         }
+        // Update button text
+        if (visibleCount >= dynamicProjects.length) {
+            loadMoreBtn.textContent = "Show Less";
+            fullyExpanded = true;
+        } else {
+            loadMoreBtn.textContent = "Load More";
+            fullyExpanded = false;
+        }
+    }
 
-        // Initial state = collapsed (showing only latest project)
+    // Initial render
+    renderProjects();
+
+    // Button click logic
+    loadMoreBtn.addEventListener("click", () => {
+        if (fullyExpanded) {
+            visibleCount = 1;
+        } else {
+            visibleCount++;
+        }
         renderProjects();
+    });
 
-        // Toggle expand/collapse
-        toggleBtn.addEventListener("click", () => {
-            expanded = !expanded;
-            renderProjects();
-        });
 
         
