@@ -21,6 +21,14 @@ Activity 5:
 ![Activity 5 Website Pt1](assets/img/Activity5_Website1.png)
 ![Activity 5 Website Pt2](assets/img/Activity5_Website2.png)
 
+### Website Preview
+<p align="center"> 
+  <kbd>
+    <a href="https://sarahhassaballa.github.io" target="_blank"><img src="examples/my-preview.gif">
+  </a>
+  </kbd>
+</p>
+
 
 # Personal Portfolio ⚡️ 
 > A clean, beautiful, responsive portfolio template for Software Developers!
