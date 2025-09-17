@@ -6,7 +6,7 @@ Activity 1:
 
 Activity 2:
 ![Activity 2 Repo](assets/img/Activity2_Repo.png)
-![Activity 2 Website](assets/img/Activity1_Website.png)
+![Activity 2 Website](assets/img/Activity2_Website.png)
 
 Activity 3:
 ![Activity 3 Repo](assets/img/Activity3_Repo.png)
