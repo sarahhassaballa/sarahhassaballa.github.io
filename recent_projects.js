@@ -57,23 +57,22 @@ const dynamicProjects = [
         ];
 
         const container = document.getElementById("recent-projects-container");
-        const toggleBtn = document.getElementById("toggle-btn");
+        const toggleBtn = document.getElementById("load-more-button");
 
         let expanded = false; // start collapsed every refresh
 
         function renderProjects() {
             container.innerHTML = ""; // clear
 
-            // Build the GitHub button HTML only if gitHub property exists
-            const gitHubButton = project.gitHub ? `
-                <a href="${project.gitHub}" target="_blank" class="btn-floating btn-large waves-effect waves-light blue-grey">
-                    <i class="fa fa-github"></i>
-                </a>
-            ` : '';
-
             if (expanded) {
                 // Show all projects
                 dynamicProjects.forEach(project => {
+                // Build the GitHub button HTML only if gitHub property exists
+                    const gitHubButton = project.gitHub ? `
+                        <a href="${project.gitHub}" target="_blank" class="btn-floating btn-large waves-effect waves-light blue-grey">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    ` : '';
                     const card = `
                        <div class="col s12 m6 l4">
                             <div class="card medium">
@@ -106,6 +105,11 @@ const dynamicProjects = [
             } else {
                 // Show only most recent project (first in array)
                 const project = dynamicProjects[0];
+                const gitHubButton = project.gitHub ? `
+                    <a href="${project.gitHub}" target="_blank" class="btn-floating btn-large waves-effect waves-light blue-grey">
+                        <i class="fa fa-github"></i>
+                    </a>
+                ` : '';
                 const card = `
                         <div class="col s12 m6 l4">
                             <div class="card medium">
