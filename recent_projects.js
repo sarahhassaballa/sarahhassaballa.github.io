@@ -78,7 +78,7 @@ function renderProjects() {
     toggleBtn.textContent = "Collapse";
   } else {
     // Show only most recent project
-    const project = projects[0];
+    const project = dynamicProjects[0];
     container.innerHTML = `
       <div class="col s12 m6 l4">
         <div class="card">
