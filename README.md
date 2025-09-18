@@ -2,7 +2,7 @@
 # This repo is a clone of https://github.com/varadbhogayata/varadbhogayata.github.io
 
 Activity 1:  
-![Activity 1 README](assets/img/Activity1_README.png)
+![Activity 1 Repo](assets/img/Activity1_Repo.png)
 
 Activity 2:
 ![Activity 2 Repo](assets/img/Activity2_Repo.png)
